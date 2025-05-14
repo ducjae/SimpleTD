@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  springapp:
+    build: .
+    ports:
+      - "8081:8081"
+    container_name: spring-boot-app
