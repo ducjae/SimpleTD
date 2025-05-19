@@ -15,12 +15,12 @@ public class LoginChkTest {
         assertFalse(LoginChk.loginId("b"), "The loginId method should return false for an invalid ID.");
     }
 
-    // @Test
-    // public void testLoginPwdSuccess() {
-    //     PasswordValidator pwdVal = new PasswordValidator();
-    //     String validPassword = "validPassword"; // Assume this is a valid password according to PasswordValidator
-    //     assertEquals("비밀번호가 유효합니다.", LoginChk.loginPwd(validPassword), "The loginPwd method should return success message for a valid password.");
-    // }
+    @Test
+    public void testLoginPwdSuccess() {
+        PasswordValidator pwdVal = new PasswordValidator();
+        String validPassword = "validPassword"; // Assume this is a valid password according to PasswordValidator
+        assertEquals("비밀번호가 유효합니다.", LoginChk.loginPwd(validPassword), "The loginPwd method should return success message for a valid password.");
+    }
 
     @Test
     public void testLoginPwdFailure() {
