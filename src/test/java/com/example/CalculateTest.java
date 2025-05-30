@@ -18,29 +18,29 @@ public class CalculateTest {
     @Test
     public void testPlus() {
         assertEquals(5, calculate.plus(2, 3));
-        assertEquals(-1, calculate.plus(-2, 1));
-        assertEquals(0, calculate.plus(0, 0));
+        assertEquals(0, calculate.plus(-2, 2));
+        assertEquals(-5, calculate.plus(-2, -3));
     }
 
     @Test
     public void testMinus() {
-        assertEquals(1, calculate.minus(3, 2));
-        assertEquals(-3, calculate.minus(-2, 1));
-        assertEquals(0, calculate.minus(0, 0));
+        assertEquals(-1, calculate.minus(2, 3));
+        assertEquals(-4, calculate.minus(-2, 2));
+        assertEquals(1, calculate.minus(-2, -3));
     }
 
     @Test
     public void testMultiply() {
         assertEquals(6, calculate.multiply(2, 3));
-        assertEquals(-2, calculate.multiply(-2, 1));
-        assertEquals(0, calculate.multiply(0, 5));
+        assertEquals(-4, calculate.multiply(-2, 2));
+        assertEquals(6, calculate.multiply(-2, -3));
     }
 
     @Test
     public void testDivide() {
         assertEquals(2, calculate.divide(6, 3));
-        assertEquals(-2, calculate.divide(-4, 2));
-        assertEquals(0, calculate.divide(0, 1));
+        assertEquals(-1, calculate.divide(-2, 2));
+        assertEquals(1, calculate.divide(-3, -3));
     }
 
     @Test

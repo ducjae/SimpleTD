@@ -7,36 +7,36 @@ public class PasswordValidatorTest {
 
     @Test
     public void testNullPassword() {
-        assertEquals("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”.", PasswordValidator.validatePassword(null));
+        assertEquals("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.", PasswordValidator.validatePassword(null));
     }
 
     @Test
     public void testEmptyPassword() {
-        assertEquals("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”.", PasswordValidator.validatePassword(""));
+        assertEquals("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.", PasswordValidator.validatePassword(""));
     }
 
     @Test
     public void testShortPassword() {
-        assertEquals("ë¹„ë°€ë²ˆí˜¸ëŠ” ìµœì†Œ 8ê¸€ì ì´ìƒì´ì–´ì•¼ í•©ë‹ˆë‹¤.", PasswordValidator.validatePassword("Ab1"));
+        assertEquals("ºñ¹Ğ¹øÈ£´Â ÃÖ¼Ò 8±ÛÀÚ ÀÌ»óÀÌ¾î¾ß ÇÕ´Ï´Ù.", PasswordValidator.validatePassword("Ab1"));
     }
 
     @Test
     public void testPasswordWithoutLowerCase() {
-        assertEquals("ë¹„ë°€ë²ˆí˜¸ëŠ” ì†Œë¬¸ìë¥¼ í¬í•¨í•´ì•¼ í•©ë‹ˆë‹¤.", PasswordValidator.validatePassword("ABCDEFG1"));
+        assertEquals("ºñ¹Ğ¹øÈ£´Â ¼Ò¹®ÀÚ¸¦ Æ÷ÇÔÇØ¾ß ÇÕ´Ï´Ù.", PasswordValidator.validatePassword("PASSWORD1"));
     }
 
     @Test
     public void testPasswordWithoutUpperCase() {
-        assertEquals("ë¹„ë°€ë²ˆí˜¸ëŠ” ëŒ€ë¬¸ìë¥¼ í¬í•¨í•´ì•¼ í•©ë‹ˆë‹¤.", PasswordValidator.validatePassword("abcdefg1"));
+        assertEquals("ºñ¹Ğ¹øÈ£´Â ´ë¹®ÀÚ¸¦ Æ÷ÇÔÇØ¾ß ÇÕ´Ï´Ù.", PasswordValidator.validatePassword("password1"));
     }
 
     @Test
     public void testPasswordWithoutDigit() {
-        assertEquals("ë¹„ë°€ë²ˆí˜¸ëŠ” ìˆ«ìë¥¼ í¬í•¨í•´ì•¼ í•©ë‹ˆë‹¤.", PasswordValidator.validatePassword("Abcdefgh"));
+        assertEquals("ºñ¹Ğ¹øÈ£´Â ¼ıÀÚ¸¦ Æ÷ÇÔÇØ¾ß ÇÕ´Ï´Ù.", PasswordValidator.validatePassword("Password"));
     }
 
     @Test
     public void testValidPassword() {
-        assertEquals("ë¹„ë°€ë²ˆí˜¸ê°€ ìœ íš¨í•©ë‹ˆë‹¤.", PasswordValidator.validatePassword("Abcdefg1"));
+        assertEquals("ºñ¹Ğ¹øÈ£°¡ À¯È¿ÇÕ´Ï´Ù.", PasswordValidator.validatePassword("Valid1Password"));
     }
 }
