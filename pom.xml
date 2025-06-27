@@ -74,7 +74,43 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<!-- PMD Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.21.0</version>
+				<configuration>
+					<rulesets>
+						<ruleset>/rulesets/java/quickstart.xml</ruleset>
+						<ruleset>/rulesets/java/bestpractices.xml</ruleset>
+						<ruleset>/rulesets/java/codestyle.xml</ruleset>
+					</rulesets>
+					<targetJdk>${java.version}</targetJdk>
+					<minimumTokens>100</minimumTokens>
+					<format>xml</format>
+					<failOnViolation>false</failOnViolation>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+							<goal>cpd-check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.21.0</version>
+			</plugin>
+		</plugins>
+	</reporting>
 
 </project>
