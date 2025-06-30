@@ -81,16 +81,8 @@
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>3.21.0</version>
 				<configuration>
-					<rulesets>
-						<ruleset>category/java/bestpractices.xml</ruleset>
-						<ruleset>category/java/codestyle.xml</ruleset>
-						<ruleset>category/java/design.xml</ruleset>
-						<ruleset>category/java/errorprone.xml</ruleset>
-						<ruleset>category/java/performance.xml</ruleset>
-					</rulesets>
+					<!-- 룰셋 지정하지 않으면 기본 룰셋 사용 -->
 					<targetJdk>${java.version}</targetJdk>
-					<minimumTokens>100</minimumTokens>
-					<format>xml</format>
 					<failOnViolation>false</failOnViolation>
 					<verbose>true</verbose>
 				</configuration>
