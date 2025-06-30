@@ -90,6 +90,7 @@
 					<minimumTokens>100</minimumTokens>
 					<format>xml</format>
 					<failOnViolation>false</failOnViolation>
+					<verbose>true</verbose>
 				</configuration>
 				<executions>
 					<execution>
