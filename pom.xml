@@ -67,10 +67,10 @@
 					</execution>
 					<execution>
 						<id>report</id>
-						<!-- <phase>test</phase>
+						<phase>test</phase>
 						<goals>
 							<goal>report</goal>
-						</goals> -->
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
