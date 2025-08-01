@@ -18,7 +18,7 @@ public class LoginChk {
     	return pwdChk;
     }
 
-    
+     
     public static void main(String[] args) {
 
         String inputUsername = "a";
